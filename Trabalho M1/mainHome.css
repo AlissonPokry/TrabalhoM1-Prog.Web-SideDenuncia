@@ -6,7 +6,6 @@
     align-items: flex-start;
     margin-left: auto;
     margin-right: 10px;
-    min-height: calc(100vh - 50px - 196px);
 }
 
 form{

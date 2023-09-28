@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="estiloPadrao.css">
@@ -36,19 +36,19 @@
     </section>
     <section class="secaoData">
         <h1 class="titulo">Relato do Ocorrido e Mídias</h1>
-            <form class="formularioData">
-                <div class="labelEcampo">
-                    <label class="label">Descrição:</label>
-                    <textarea placeholder="Descreva com detalhes o Ocorrido" class="areadeTexto" required></textarea>
-                </div>
-                <div class="labelEcampo">
-                    <label class="label">Mídias:</label>
-                    <p class="OBS">Certifique-se de fazer upload de um arquivo .zip com as mídias dentro</p>
-                    <input type="file" class="campo">
-                </div>
-            </form>
-            <button class="continuar">continuar</button>
-        </section>
+        <form class="formularioData">
+            <div class="labelEcampo">
+                <label class="label">Descrição:</label>
+                <textarea id="descricao" placeholder="Descreva com detalhes o Ocorrido" class="areadeTexto" required></textarea>
+            </div>
+            <div class="labelEcampo">
+                <label class="label">Mídias:</label>
+                <p class="OBS">Certifique-se de fazer upload de um arquivo .zip com as mídias dentro</p>
+                <input type="file" class="campo">
+            </div>
+        </form>
+        <button class="continuar">continuar</button>
+    </section>
 
 </main>
 
@@ -81,5 +81,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const textoArmazenado = localStorage.getItem("municipio");
+    const textoArmazenado2 = localStorage.getItem("nomeComp")
+    if (textoArmazenado) {
+        document.getElementById("descricao").value = textoArmazenado + textoArmazenado2;
+    }
+
+</script>
+
 </body>
 </html>
